@@ -1,0 +1,11 @@
+services:
+  mock-api-provider:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: sqlite:////app/data/mock.db
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

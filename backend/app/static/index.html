@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mock API Provider</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>Mock API</h1>
+    <button data-view="dashboard" class="nav active">Dashboard</button>
+    <button data-view="projects" class="nav">Projects</button>
+    <button data-view="logs" class="nav">Logs</button>
+    <button id="seedBtn" class="secondary">Seed demo</button>
+  </aside>
+  <main class="content">
+    <header><div><h2 id="pageTitle">Dashboard</h2><p id="subtitle">Local-first mock API provider</p></div><a href="/docs" target="_blank">API Docs</a></header>
+    <section id="dashboard" class="view"></section>
+    <section id="projects" class="view hidden"></section>
+    <section id="routes" class="view hidden"></section>
+    <section id="responses" class="view hidden"></section>
+    <section id="logs" class="view hidden"></section>
+  </main>
+  <dialog id="modal"><form method="dialog"><button class="close">×</button></form><div id="modalBody"></div></dialog>
+  <div id="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
